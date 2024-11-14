@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
 
 //updating a user by id
 router.put("/:id", async (req, res) => {
-  if (req.params.id.length !== 24) {
+  if (res.params.id.length !== 24) {
     res.status(400).json({ massage: "invalid id" });
   }
   const userId = ObjectId.createFromHexString(req.params.id);
@@ -42,7 +42,7 @@ router.put("/:id", async (req, res) => {
 
 //deleting a user from the database
 router.delete("/:id", async (req, res) => {
-  if (req.params.id.length !== 24) {
+  if (res.params.id.length !== 24) {
     res.status(400).json({ massage: "invalid id" });
   }
   const userId = ObjectId.createFromHexString(req.params.id);
