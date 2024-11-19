@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
   res.status(201).json(result);
 });
 
-//now let update a user by its id
+//now let update a movie by its id
 router.put("/:id", async (req, res) => {
   const movieId = ObjectId.createFromHexString(req.params.id);
   const collection = db.collection("movies");
